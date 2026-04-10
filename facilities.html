@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Facilities | Sanwal Public School, Nainital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="transitions.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="transitions.js" defer></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#001e40",
+                        "primary-container": "#003366",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#799dd6",
+                        "primary-fixed": "#d5e3ff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "secondary": "#515f74",
+                        "secondary-container": "#d5e3fc",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#57657a",
+                        "tertiary": "#2a1c00",
+                        "tertiary-container": "#453000",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#bb9650",
+                        "tertiary-fixed": "#ffdea5",
+                        "tertiary-fixed-dim": "#e9c176",
+                        "background": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#43474f",
+                        "outline": "#737780",
+                        "outline-variant": "#c3c6d1",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceef0",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    borderRadius: {
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+            <a href="index.html" class="text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="academics.html" class="text-slate-600 hover:text-primary transition-colors">Academics</a>
+                <a href="admissions.html" class="text-slate-600 hover:text-primary transition-colors">Admissions</a>
+                <a href="principal.html" class="text-slate-600 hover:text-primary transition-colors">Principal</a>
+                <a href="gallery.html" class="text-slate-600 hover:text-primary transition-colors">Gallery</a>
+                <a href="facilities.html" class="text-primary font-bold border-b-2 border-tertiary-fixed-dim">Facilities</a>
+                <a href="activities.html" class="text-slate-600 hover:text-primary transition-colors">Activities</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-20">
+        <section class="max-w-7xl mx-auto px-8 py-16">
+            <span class="text-on-tertiary-container font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Our Campus</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight mb-8">Spaces Designed <br/><span class="text-tertiary-fixed-dim">to Inspire.</span></h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <p class="text-lg text-on-surface-variant leading-relaxed">Explore our world-class facilities, where modern architecture meets academic rigor. Every corner of our campus is crafted to inspire curiosity and collaboration.</p>
+                <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl">
+                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYxrtE3l6_0ovJ2HnDhDBSj5jyrglkm6AFECfuoibemWGp6XwCjyAd5h-ICmwAM1Dtls4N2yPCNh6OSWJCt4xZxW7EylwTbB19W3EEtLPhthvDUgD7OHSpymFVHDo8M1EH4TGgFbTHTA8HChXxZXChwEXQQXy8cs5MTIqiBfCRwCA0qQ8dSr_EjBrykwIkfi-BnHnluI85rP7uQgS8VTZuEcOTYuo3CjiAqKMQGbYNNed1bdQPt4CcYBrO8jRTlW_sVXQBxLGX5U" alt="Campus View"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid Facilities -->
+        <section class="bg-surface-container-low py-24">
+            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-8 group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm p-10 min-h-[400px]">
+                    <h3 class="text-3xl font-bold text-primary mb-4">The Great Library</h3>
+                    <p class="text-on-surface-variant leading-relaxed max-w-xl">Housing over 50,000 volumes and digital archives, our library is an architectural marvel designed for quiet contemplation and deep research.</p>
+                    <img class="absolute bottom-0 right-0 w-1/2 opacity-20 filter grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQgOotqvc3JlqH5Kye92Yw868n21oMAZibApKbuPwAcw0P62iz-gLgTq-_bqDgM8mj7nGvonUptRHq5OjuJPilDUK9AcTJWtzS4Qlm4DqvMFIzO7XgVc8iui2be9igiMDUN6FsRgECOs2rwm4r2hFS7Bf0vwFsciCqbYUc9AH6aEJerAsA-fn2NO186vU4n7_KBW4kofMDPEe8x0eSczaoktIV8r94c3e9qW2HiYOTJlx7bri2hzMj1SCOtEj2CVdfp0p0y-dlLUI" alt="Library"/>
+                </div>
+                <div class="md:col-span-4 bg-primary text-on-primary p-10 rounded-[2rem] flex flex-col justify-center">
+                    <span class="material-symbols-outlined text-4xl text-tertiary-fixed mb-6">sports_basketball</span>
+                    <h3 class="text-2xl font-bold mb-4">Sports Complex</h3>
+                    <p class="text-primary-fixed/80 text-sm">Professional grade indoor arenas, Olympic-sized pool, and track facilities.</p>
+                </div>
+                <!-- More items... -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white w-full">
+        <div class="px-8 py-16 text-center text-sm text-slate-500">
+            © 2024 Sanwal Public School, Nainital. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
