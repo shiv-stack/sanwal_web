@@ -66,8 +66,8 @@
 <body class="bg-surface text-on-surface">
     <!-- Top Navigation Bar -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
-            <a href="index.html" class="text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
+        <div class="flex items-center justify-between px-6 md:px-8 py-4 max-w-7xl mx-auto w-full">
+            <a href="index.html" class="text-lg md:text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
                 <a href="academics.html" class="text-slate-600 hover:text-primary transition-colors">Academics</a>
                 <a href="admissions.html" class="text-slate-600 hover:text-primary transition-colors">Admissions</a>
@@ -76,27 +76,50 @@
                 <a href="facilities.html" class="text-slate-600 hover:text-primary transition-colors">Facilities</a>
                 <a href="activities.html" class="text-slate-600 hover:text-primary transition-colors">Activities</a>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
+            <div class="flex items-center gap-2 md:gap-4">
+                <a href="contact.html" class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
                     Contact Us
                 </a>
+                <button id="mobile-menu-toggle" class="md:hidden flex items-center p-2 text-primary focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold text-primary uppercase">Menu</span>
+                <button id="mobile-menu-close" class="p-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6 text-2xl font-bold text-primary">
+                <a href="index.html" class="hover:text-tertiary-fixed-dim transition-colors">Home</a>
+                <a href="academics.html" class="hover:text-tertiary-fixed-dim transition-colors">Academics</a>
+                <a href="admissions.html" class="hover:text-tertiary-fixed-dim transition-colors">Admissions</a>
+                <a href="principal.html" class="hover:text-tertiary-fixed-dim transition-colors">Principal</a>
+                <a href="gallery.html" class="text-tertiary-fixed-dim">Gallery</a>
+                <a href="facilities.html" class="hover:text-tertiary-fixed-dim transition-colors">Facilities</a>
+                <a href="activities.html" class="hover:text-tertiary-fixed-dim transition-colors">Activities</a>
+                <a href="contact.html" class="mt-4 bg-primary text-white text-center py-4 rounded-2xl text-lg">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <main class="pt-24 pb-20">
-        <header class="max-w-7xl mx-auto px-8 mb-16 py-12">
-            <span class="text-xs font-bold tracking-[0.2em] text-on-tertiary-container uppercase mb-4 block">Visual Legacy</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight">Capturing <span class="text-tertiary-fixed-dim">Excellence.</span></h1>
-            <p class="mt-6 text-lg text-on-surface-variant max-w-2xl">Explore a curated glimpse into the daily life and historic milestones of Sanwal Public School.</p>
+        <header class="max-w-7xl mx-auto px-6 md:px-8 mb-12 md:mb-16 py-8 md:py-12">
+            <span class="text-[10px] md:text-xs font-bold tracking-[0.2em] text-on-tertiary-container uppercase mb-4 block">Visual Legacy</span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight">Capturing <span class="text-tertiary-fixed-dim">Excellence.</span></h1>
+            <p class="mt-6 text-base md:text-lg text-on-surface-variant max-w-2xl">Explore a curated glimpse into the daily life and historic milestones of Sanwal Public School.</p>
         </header>
 
-        <section class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6 auto-rows-[300px]">
-                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl bg-surface-container-low">
+        <section class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-6 auto-rows-[250px] md:auto-rows-[300px]">
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl bg-surface-container-low min-h-[300px] md:min-h-0">
                     <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHEJf_teB_viHmf84PlwmmV0XKxRR46fNIWb9RzVXhMhnTONyOi_Kw7JZAdnuLOFYzywhLU80vcL9ffiSmyQvgbl3mfd66GJhAvF-kmnRK00ek39M4rOM2i4GuI_oVUO9wLbP8FcL0CeOFcUPCEW8ZeRUyHT1fRjv9qQEChvJac8v2GUZCWaI42MFNvverlgcZqn31z0GMvqZbbzxtrPn1HhEzHVziYEA0tWwPGWstKlmpA2Pq4HI7irGmRkVQALgvhs7qdoJrUlY" alt="Campus Life"/>
                 </div>
-                <!-- Add more items here following the same pattern -->
+                <!-- Other items follow the pattern... -->
             </div>
         </section>
     </main>

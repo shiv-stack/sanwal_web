@@ -66,8 +66,8 @@
 <body class="bg-surface text-on-surface">
     <!-- Top Navigation Bar -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
-            <a href="index.html" class="text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
+        <div class="flex items-center justify-between px-6 md:px-8 py-4 max-w-7xl mx-auto w-full">
+            <a href="index.html" class="text-lg md:text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
                 <a href="academics.html" class="text-slate-600 hover:text-primary transition-colors">Academics</a>
                 <a href="admissions.html" class="text-slate-600 hover:text-primary transition-colors">Admissions</a>
@@ -76,42 +76,65 @@
                 <a href="facilities.html" class="text-slate-600 hover:text-primary transition-colors">Facilities</a>
                 <a href="activities.html" class="text-slate-600 hover:text-primary transition-colors">Activities</a>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm border-2 border-tertiary-fixed-dim">
+            <div class="flex items-center gap-2 md:gap-4">
+                <a href="contact.html" class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
                     Contact Us
                 </a>
+                <button id="mobile-menu-toggle" class="md:hidden flex items-center p-2 text-primary focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold text-primary uppercase">Menu</span>
+                <button id="mobile-menu-close" class="p-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6 text-2xl font-bold text-primary">
+                <a href="index.html" class="hover:text-tertiary-fixed-dim transition-colors">Home</a>
+                <a href="academics.html" class="hover:text-tertiary-fixed-dim transition-colors">Academics</a>
+                <a href="admissions.html" class="hover:text-tertiary-fixed-dim transition-colors">Admissions</a>
+                <a href="principal.html" class="hover:text-tertiary-fixed-dim transition-colors">Principal</a>
+                <a href="gallery.html" class="hover:text-tertiary-fixed-dim transition-colors">Gallery</a>
+                <a href="facilities.html" class="hover:text-tertiary-fixed-dim transition-colors">Facilities</a>
+                <a href="activities.html" class="hover:text-tertiary-fixed-dim transition-colors">Activities</a>
+                <a href="contact.html" class="mt-4 bg-primary text-white text-center py-4 rounded-2xl text-lg underline decoration-tertiary-fixed-dim decoration-2 underline-offset-8">Contact Us</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
-        <header class="mb-16">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-6">Connect with <span class="text-on-tertiary-container">Excellence.</span></h1>
-            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed">Whether you are an aspiring student, a parent, or an alum, we are here to assist you. Reach out to our offices below.</p>
+    <main class="pt-24 md:pt-32 pb-16 md:pb-20 px-6 md:px-8 max-w-7xl mx-auto">
+        <header class="mb-12 md:mb-16">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter text-primary mb-6 leading-tight">Connect with <span class="text-on-tertiary-container">Excellence.</span></h1>
+            <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed">Whether you are an aspiring student, a parent, or an alum, we are here to assist you. Reach out to our offices below.</p>
         </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
             <div class="lg:col-span-7">
-                <section class="bg-surface-container-low p-8 md:p-12 rounded-[2rem] shadow-sm">
-                    <h2 class="text-2xl font-bold text-primary mb-8 flex items-center gap-3">
+                <section class="bg-surface-container-low p-6 md:p-12 rounded-[2rem] shadow-sm">
+                    <h2 class="text-xl md:text-2xl font-bold text-primary mb-8 flex items-center gap-3">
                         <span class="material-symbols-outlined">mail</span> Send a Message
                     </h2>
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
-                                <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Full Name</label>
-                                <input class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="text" placeholder="John Doe"/>
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Full Name</label>
+                                <input class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary/20 transition-all outline-none text-sm" type="text" placeholder="John Doe"/>
                             </div>
                             <div class="space-y-2">
-                                <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Email Address</label>
-                                <input class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary/20 transition-all outline-none" type="email" placeholder="j.doe@example.com"/>
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Email Address</label>
+                                <input class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary/20 transition-all outline-none text-sm" type="email" placeholder="j.doe@example.com"/>
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Message</label>
-                            <textarea class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none" rows="5" placeholder="How can we help you?"></textarea>
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Message</label>
+                            <textarea class="w-full px-4 py-3 rounded-xl bg-surface-container-lowest border-none ring-1 ring-outline-variant/30 focus:ring-2 focus:ring-primary/20 transition-all outline-none resize-none text-sm" rows="5" placeholder="How can we help you?"></textarea>
                         </div>
-                        <button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-sm hover:opacity-90 active:scale-95 transition-all w-full md:w-auto">
+                        <button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold uppercase tracking-widest text-xs hover:opacity-90 active:scale-95 transition-all w-full md:w-auto">
                             Send Inquiry
                         </button>
                     </form>
@@ -119,21 +142,21 @@
             </div>
             
             <aside class="lg:col-span-5 space-y-6">
-                <div class="bg-primary text-white p-8 md:p-10 rounded-[2rem] shadow-lg">
-                    <h3 class="text-2xl font-bold mb-8">Campus Information</h3>
+                <div class="bg-primary text-white p-6 md:p-10 rounded-[2rem] shadow-lg">
+                    <h3 class="text-xl md:text-2xl font-bold mb-8">Campus Information</h3>
                     <div class="space-y-8">
                         <div class="flex gap-4">
                             <span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
                             <div>
-                                <h4 class="font-bold text-sm tracking-widest uppercase mb-1 text-on-primary-container">Address</h4>
-                                <p class="text-lg leading-snug">123 Malital Road, Nainital<br/>Uttarakhand, 263001</p>
+                                <h4 class="font-bold text-[10px] tracking-widest uppercase mb-1 text-on-primary-container">Address</h4>
+                                <p class="text-base md:text-lg leading-snug">123 Malital Road, Nainital<br/>Uttarakhand, 263001</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
                             <span class="material-symbols-outlined text-tertiary-fixed">call</span>
                             <div>
-                                <h4 class="font-bold text-sm tracking-widest uppercase mb-1 text-on-primary-container">Phone</h4>
-                                <p class="text-lg">+91 (5942) 235-000</p>
+                                <h4 class="font-bold text-[10px] tracking-widest uppercase mb-1 text-on-primary-container">Phone</h4>
+                                <p class="text-base md:text-lg">+91 (5942) 235-000</p>
                             </div>
                         </div>
                     </div>

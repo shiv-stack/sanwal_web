@@ -20,6 +20,34 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.animationDelay = `${(index + 1) * 0.1}s`;
         el.classList.add('ready');
     });
+
+    // Mobile Menu Toggle Logic
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const menuClose = document.getElementById('mobile-menu-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        });
+    }
+
+    if (menuClose && mobileMenu) {
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    }
+
+    // Close menu when clicking on a link
+    const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
+    mobileMenuLinks?.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        });
+    });
 });
 
 // Handle the "Back" button from browser cache to re-trigger animations
@@ -33,6 +61,14 @@ window.addEventListener('pageshow', (event) => {
             void main.offsetWidth; // Trigger reflow
             main.style.animation = null;
         }
+        
+        // Ensure menu is closed on back navigation
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenu) {
+            mobileMenu.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        }
     }
 });
+
 

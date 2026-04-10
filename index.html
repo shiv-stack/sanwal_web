@@ -82,8 +82,8 @@
 <body class="bg-surface text-on-surface">
     <!-- Top Navigation Bar -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
-            <a href="index.html" class="text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
+        <div class="flex items-center justify-between px-6 md:px-8 py-4 max-w-7xl mx-auto w-full">
+            <a href="index.html" class="text-lg md:text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
                 <a href="academics.html" class="text-slate-600 hover:text-primary transition-colors">Academics</a>
                 <a href="admissions.html" class="text-slate-600 hover:text-primary transition-colors">Admissions</a>
@@ -92,35 +92,57 @@
                 <a href="facilities.html" class="text-slate-600 hover:text-primary transition-colors">Facilities</a>
                 <a href="activities.html" class="text-slate-600 hover:text-primary transition-colors">Activities</a>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
+            <div class="flex items-center gap-2 md:gap-4">
+                <a href="contact.html" class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
                     Contact Us
                 </a>
+                <button id="mobile-menu-toggle" class="md:hidden flex items-center p-2 text-primary focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold text-primary uppercase">Menu</span>
+                <button id="mobile-menu-close" class="p-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6 text-2xl font-bold text-primary">
+                <a href="academics.html" class="hover:text-tertiary-fixed-dim transition-colors">Academics</a>
+                <a href="admissions.html" class="hover:text-tertiary-fixed-dim transition-colors">Admissions</a>
+                <a href="principal.html" class="hover:text-tertiary-fixed-dim transition-colors">Principal</a>
+                <a href="gallery.html" class="hover:text-tertiary-fixed-dim transition-colors">Gallery</a>
+                <a href="facilities.html" class="hover:text-tertiary-fixed-dim transition-colors">Facilities</a>
+                <a href="activities.html" class="hover:text-tertiary-fixed-dim transition-colors">Activities</a>
+                <a href="contact.html" class="mt-4 bg-primary text-white text-center py-4 rounded-2xl text-lg">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative h-[800px] flex items-center overflow-hidden">
+        <section class="relative min-h-[600px] md:h-[800px] flex items-center overflow-hidden">
             <div class="absolute inset-0 z-0">
                 <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWrvWxBQDglc7L-Cxcl1PFg603kvksvYHvDm-wQzpWePwxnyek6Pkds1jL1nMX6E5L7QN135GxvNtmruiBXqvisYuARHUbP3bkZEsVBgC5N0znGUt0hPJ7UJUe5CURp_uTYR2g0tmZot0ROueTr0uhMRuKt5i1hvLZx3bvwPh72gipXubrJBt-dk9SdTeO4FryHMfbmhk9_SYPs2fJCR0eZX3sh2CNmABoXRRrgmC-BjjSgn1WJ5Pb-fgEQy6msyZcYHYFfHbdKCQ" alt="School Campus"/>
                 <div class="absolute inset-0 hero-gradient"></div>
             </div>
-            <div class="relative z-10 max-w-7xl mx-auto px-8 w-full">
+            <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 w-full">
                 <div class="max-w-2xl animate-fade-in-up">
                     <span class="inline-block text-tertiary-fixed-dim uppercase tracking-[0.2em] font-bold text-sm mb-4">Established 1924</span>
-                    <h1 class="text-6xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-6">
+                    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white leading-tight tracking-tighter mb-6">
                         Excellence in <br/><span class="text-tertiary-fixed-dim">Every Dimension.</span>
                     </h1>
-                    <p class="text-xl text-primary-fixed leading-relaxed mb-10 font-light max-w-lg">
+                    <p class="text-lg md:text-xl text-primary-fixed leading-relaxed mb-10 font-light max-w-lg">
                         Cultivating the next generation of global leaders through rigorous academics, holistic arts, and elite athletics in the heart of Nainital.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="admissions.html" class="bg-tertiary-fixed text-primary px-8 py-4 rounded-xl font-bold transition-all hover:bg-tertiary-fixed-dim hover:shadow-xl shadow-black/20">
+                    <div class="flex flex-wrap gap-4">
+                        <a href="admissions.html" class="bg-tertiary-fixed text-primary px-8 py-4 rounded-xl font-bold transition-all hover:bg-tertiary-fixed-dim hover:shadow-xl shadow-black/20 text-center w-full sm:w-auto">
                             Apply for 2025
                         </a>
-                        <a href="gallery.html" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">
+                        <a href="gallery.html" class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all text-center w-full sm:w-auto">
                             Virtual Tour
                         </a>
                     </div>
@@ -129,19 +151,19 @@
         </section>
 
         <!-- Welcome Section -->
-        <section class="py-24 bg-surface">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <section class="py-16 md:py-24 bg-surface">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-16 items-center">
                     <div class="lg:col-span-7 relative">
                         <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative z-10">
                             <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSp43nGGb0O1UGxPkedLDUMjxdu_9brbcguqFmkINtX8-h-Ha2unjulfnN-dTZzCxKyHylxP6tvLPv28kuxAKbJwb3B3yV6WhOumqLT8IwNIHewmb0zMgTNOJQNklJxL51zkMTBQ7tIjfdV9VjzhXSdW3ZUE5Qly1CBU7OmPdh18nUb3IHElEM1FtDwZDClPWWsYvAi_LVo7F3ZVW_GXW7-5LwFU5kEqYj7DahN7f9c5_XyR91YfngExXVDdNdE15nxVXP4Hcbrvg" alt="Students in Lab"/>
                         </div>
-                        <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-tertiary-fixed rounded-3xl -z-10 opacity-30"></div>
+                        <div class="absolute -bottom-6 md:-bottom-8 -right-6 md:-right-8 w-32 md:w-64 h-32 md:h-64 bg-tertiary-fixed rounded-3xl -z-10 opacity-30"></div>
                     </div>
                     <div class="lg:col-span-5">
-                        <h2 class="text-sm font-black text-on-tertiary-container uppercase tracking-widest mb-4">Welcome to Our School</h2>
-                        <h3 class="text-4xl font-bold text-primary mb-6 tracking-tight">A Legacy of Learning, A Future of Innovation.</h3>
-                        <p class="text-on-surface-variant text-lg leading-relaxed mb-8">
+                        <h2 class="text-xs md:text-sm font-black text-on-tertiary-container uppercase tracking-widest mb-4">Welcome to Our School</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6 tracking-tight">A Legacy of Learning, A Future of Innovation.</h3>
+                        <p class="text-on-surface-variant text-base md:text-lg leading-relaxed mb-8">
                             For over a century, Sanwal Public School has been the benchmark for academic distinction in Nainital. We believe that education is about sparking the curiosity that leads to lifelong discovery.
                         </p>
                         <ul class="space-y-4 mb-8 text-primary font-medium">
@@ -167,67 +189,67 @@
         </section>
 
         <!-- Experience Grid -->
-        <section class="py-24 bg-surface-container-low">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-primary tracking-tight mb-4">The Academy Experience</h2>
+        <section class="py-16 md:py-24 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="text-center mb-12 md:mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary tracking-tight mb-4">The Academy Experience</h2>
                     <p class="text-on-surface-variant max-w-2xl mx-auto">Discover the pillars that make our institution a global leader in preparatory education.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 h-auto md:h-[600px]">
-                    <div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[2rem] bg-primary">
+                    <div class="md:col-span-2 md:row-span-2 group relative overflow-hidden rounded-[2rem] bg-primary min-h-[400px]">
                         <img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrBBolOiBVBOkhK2XSEVKYjeF-T_tJmY52l_WmtzELYsviWZ8s7AE4B0dtckHNQ9UOsyy0DV4QQHeSjG9N0JhGuNbU0V06M6Fna1JWqSa8M8FOuse5nJ1KXus3KZ5NZzNuV6ybHcnS7h39iiZSaNQTu55DVJhKiQ_oagSCd2Vh0Mb2NJCu4qR7IMvU8p2FgPZAqvX6ZPc4fsDfeFHJbCX8bs-K8nqeFn8CfTqA3oc0BN1gviB1QzJXuvXD5gk8O_UyYhaBqf68uJM" alt="Academics"/>
                         <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
-                        <div class="absolute bottom-0 p-10">
+                        <div class="absolute bottom-0 p-8 md:p-10">
                             <span class="text-tertiary-fixed text-sm font-bold uppercase tracking-widest mb-2 block">Academics</span>
-                            <h4 class="text-3xl font-bold text-white mb-4">Academic Rigor & Innovation</h4>
-                            <p class="text-primary-fixed/80 text-lg">Our curriculum challenges students to think critically and solve complex global problems.</p>
+                            <h4 class="text-2xl md:text-3xl font-bold text-white mb-4">Academic Rigor & Innovation</h4>
+                            <p class="text-primary-fixed/80 text-base md:text-lg">Our curriculum challenges students to think critically and solve complex global problems.</p>
                         </div>
                     </div>
-                    <div class="md:col-span-2 group relative overflow-hidden rounded-[2rem] bg-secondary-container">
+                    <div class="md:col-span-2 group relative overflow-hidden rounded-[2rem] bg-secondary-container min-h-[250px] md:min-h-0">
                         <img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAHrOL8t45t_NoMpmEm2VVJA0LD4ylsEHNmtjGznDnSQrpa3N8wGKKe8BHBF7_ImnIHcU4Pg9tVmk44OE43dMrdIpp-O--rTaq-irgHiSzxZjzn27KHCo2sbwgLT0P0tY7r0dvgSt14DHzcJMWT6BbzIDIPa5dyts7gVdNZ4OCsk6ktKcMtJFYQChIRHBxT7WTvuC0bPkF6GAqIDBw8j62i8lNnk6iF-6FifLNTmHk_O3IMkc6NmACoW2HZLRH_Gxc5iwfiZ1oQEs" alt="Athletics"/>
                         <div class="absolute inset-0 bg-gradient-to-r from-secondary-container to-transparent"></div>
-                        <div class="absolute inset-0 flex flex-col justify-center p-10">
+                        <div class="absolute inset-0 flex flex-col justify-center p-8 md:p-10">
                             <span class="text-on-secondary-fixed-variant text-sm font-bold uppercase tracking-widest mb-2 block">Athletics</span>
-                            <h4 class="text-2xl font-bold text-on-secondary-fixed mb-2">Championship Spirit</h4>
-                            <p class="text-on-secondary-container max-w-xs">Home to 14 varsity sports and elite training facilities for future athletes.</p>
+                            <h4 class="text-xl md:text-2xl font-bold text-on-secondary-fixed mb-2">Championship Spirit</h4>
+                            <p class="text-on-secondary-container max-w-xs text-sm md:text-base">Home to 14 varsity sports and elite training facilities for future athletes.</p>
                         </div>
                     </div>
-                    <div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all p-8 flex flex-col justify-end">
+                    <div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all p-8 flex flex-col justify-end min-h-[200px] md:min-h-0">
                         <div class="mb-auto">
-                            <span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim">palette</span>
+                            <span class="material-symbols-outlined text-3xl md:text-4xl text-tertiary-fixed-dim">palette</span>
                         </div>
-                        <h4 class="text-xl font-bold text-primary mb-2">Creative Arts</h4>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">Fostering expression through music, theater, and fine arts.</p>
+                        <h4 class="text-lg md:text-xl font-bold text-primary mb-2">Creative Arts</h4>
+                        <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed">Fostering expression through music, theater, and fine arts.</p>
                     </div>
-                    <div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all p-8 flex flex-col justify-end">
+                    <div class="group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm hover:shadow-xl transition-all p-8 flex flex-col justify-end min-h-[200px] md:min-h-0">
                         <div class="mb-auto">
-                            <span class="material-symbols-outlined text-4xl text-tertiary-fixed-dim">public</span>
+                            <span class="material-symbols-outlined text-3xl md:text-4xl text-tertiary-fixed-dim">public</span>
                         </div>
-                        <h4 class="text-xl font-bold text-primary mb-2">Global Citizenship</h4>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">International exchange programs spanning five continents.</p>
+                        <h4 class="text-lg md:text-xl font-bold text-primary mb-2">Global Citizenship</h4>
+                        <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed">International exchange programs spanning five continents.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Principal Teaser -->
-        <section class="py-24 bg-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="relative bg-surface-container-low rounded-[3rem] p-12 lg:p-20 flex flex-col lg:flex-row gap-16 items-center">
-                    <div class="absolute top-0 right-0 p-8 text-surface-container-highest/50">
-                        <span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+        <section class="py-16 md:py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 md:px-8">
+                <div class="relative bg-surface-container-low rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 lg:p-20 flex flex-col lg:flex-row gap-8 md:gap-16 items-center">
+                    <div class="absolute top-0 right-0 p-4 md:p-8 text-surface-container-highest/30 md:text-surface-container-highest/50">
+                        <span class="material-symbols-outlined text-[80px] md:text-[120px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
                     </div>
-                    <div class="w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden flex-shrink-0 border-8 border-white shadow-xl">
+                    <div class="w-32 h-32 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden flex-shrink-0 border-4 md:border-8 border-white shadow-xl">
                         <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXYH-2kEwhl3V2tDNeFutJl4CoHW0fvZhNDjyw8E3piJBfF2bOjlu7Gx0REF1MRs23osdoWh1CID2THmBz3LyryEoxidA9Xjicx6w4ZZERNw_AsAL-pNyqWH6QA-jL8kd8HnaoLlIK-9Z6zkzumFcLqvU5AnsHqfXuFMtntgSyGgZm9HxEMlQfd2iBOLXBBpcpcz0A9hDjCwJ7VUG6B-5d0ikfR1MqApiRdUynQdTxzUANtXqE7O4J3kBGIzglE13yEq3uYaDeqVM" alt="Principal"/>
                     </div>
-                    <div class="relative z-10">
-                        <h2 class="text-sm font-black text-on-tertiary-container uppercase tracking-[0.2em] mb-6">A Letter to Parents & Students</h2>
-                        <blockquote class="text-2xl lg:text-3xl font-medium text-primary italic leading-relaxed mb-8">
+                    <div class="relative z-10 text-center lg:text-left">
+                        <h2 class="text-xs font-black text-on-tertiary-container uppercase tracking-[0.2em] mb-4 md:mb-6">A Letter to Parents & Students</h2>
+                        <blockquote class="text-xl md:text-2xl lg:text-3xl font-medium text-primary italic leading-relaxed mb-8">
                             "At Sanwal Public School, we don't just teach for the classroom; we prepare for life. Our commitment is to ensure every child discovers their unique brilliance in an environment of safety and respect."
                         </blockquote>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <p class="text-xl font-bold text-primary">Dr. Eleanor Sterling</p>
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                            <div class="text-center sm:text-left">
+                                <p class="text-lg md:text-xl font-bold text-primary">Dr. Eleanor Sterling</p>
                                 <p class="text-on-surface-variant">Principal & Head of School</p>
                             </div>
                             <a href="principal.html" class="bg-primary text-on-primary px-8 py-3 rounded-xl hover:shadow-lg transition-all flex items-center gap-2">

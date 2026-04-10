@@ -66,8 +66,8 @@
 <body class="bg-surface text-on-surface">
     <!-- Top Navigation Bar -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
-            <a href="index.html" class="text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
+        <div class="flex items-center justify-between px-6 md:px-8 py-4 max-w-7xl mx-auto w-full">
+            <a href="index.html" class="text-lg md:text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
                 <a href="academics.html" class="text-slate-600 hover:text-primary transition-colors">Academics</a>
                 <a href="admissions.html" class="text-slate-600 hover:text-primary transition-colors">Admissions</a>
@@ -76,29 +76,52 @@
                 <a href="facilities.html" class="text-slate-600 hover:text-primary transition-colors">Facilities</a>
                 <a href="activities.html" class="text-primary font-bold border-b-2 border-tertiary-fixed-dim">Activities</a>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
+            <div class="flex items-center gap-2 md:gap-4">
+                <a href="contact.html" class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
                     Contact Us
                 </a>
+                <button id="mobile-menu-toggle" class="md:hidden flex items-center p-2 text-primary focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold text-primary uppercase">Menu</span>
+                <button id="mobile-menu-close" class="p-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6 text-2xl font-bold text-primary">
+                <a href="index.html" class="hover:text-tertiary-fixed-dim transition-colors">Home</a>
+                <a href="academics.html" class="hover:text-tertiary-fixed-dim transition-colors">Academics</a>
+                <a href="admissions.html" class="hover:text-tertiary-fixed-dim transition-colors">Admissions</a>
+                <a href="principal.html" class="hover:text-tertiary-fixed-dim transition-colors">Principal</a>
+                <a href="gallery.html" class="hover:text-tertiary-fixed-dim transition-colors">Gallery</a>
+                <a href="facilities.html" class="hover:text-tertiary-fixed-dim transition-colors">Facilities</a>
+                <a href="activities.html" class="text-tertiary-fixed-dim">Activities</a>
+                <a href="contact.html" class="mt-4 bg-primary text-white text-center py-4 rounded-2xl text-lg">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <main class="pt-24 pb-20">
-        <section class="max-w-7xl mx-auto px-8 py-16">
-            <span class="text-on-tertiary-container font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Student Life</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight mb-8">Beyond the <br/><span class="text-on-secondary-container">Classroom.</span></h1>
-            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">At Sanwal Public School, education is a 24/7 experience. Our extracurricular programs are designed to build character, leadership, and lifelong passions.</p>
+        <section class="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
+            <span class="text-on-tertiary-container font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4 block">Student Life</span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight mb-8">Beyond the <br/><span class="text-on-secondary-container">Classroom.</span></h1>
+            <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">At Sanwal Public School, education is a 24/7 experience. Our extracurricular programs are designed to build character, leadership, and lifelong passions.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Activity 1 -->
                 <div class="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
-                    <div class="h-64 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCH4YyR8Sst-zCjY3-W2jY7Y5-F-M-6-J-4-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O-J-Y-6-O-O" alt="Robotics"/>
+                    <div class="h-48 md:h-64 overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://images.unsplash.com/photo-1561557944-6e7860d1a7eb?q=80&w=1974&auto=format&fit=crop" alt="Robotics"/>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-bold text-primary mb-4">Robotics & Innovation</h3>
-                        <p class="text-on-surface-variant text-sm leading-relaxed">Students build and program autonomous machines, competing in regional and national hackathons.</p>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xl md:text-2xl font-bold text-primary mb-4">Robotics & Innovation</h3>
+                        <p class="text-on-surface-variant text-xs md:text-sm leading-relaxed">Students build and program autonomous machines, competing in regional and national hackathons.</p>
                     </div>
                 </div>
                 <!-- ... -->

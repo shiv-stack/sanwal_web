@@ -66,8 +66,8 @@
 <body class="bg-surface text-on-surface">
     <!-- Top Navigation Bar -->
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
-        <div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
-            <a href="index.html" class="text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
+        <div class="flex items-center justify-between px-6 md:px-8 py-4 max-w-7xl mx-auto w-full">
+            <a href="index.html" class="text-lg md:text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
                 <a href="academics.html" class="text-slate-600 hover:text-primary transition-colors">Academics</a>
                 <a href="admissions.html" class="text-slate-600 hover:text-primary transition-colors">Admissions</a>
@@ -76,20 +76,43 @@
                 <a href="facilities.html" class="text-primary font-bold border-b-2 border-tertiary-fixed-dim">Facilities</a>
                 <a href="activities.html" class="text-slate-600 hover:text-primary transition-colors">Activities</a>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="contact.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
+            <div class="flex items-center gap-2 md:gap-4">
+                <a href="contact.html" class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
                     Contact Us
                 </a>
+                <button id="mobile-menu-toggle" class="md:hidden flex items-center p-2 text-primary focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-xl font-bold text-primary uppercase">Menu</span>
+                <button id="mobile-menu-close" class="p-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6 text-2xl font-bold text-primary">
+                <a href="index.html" class="hover:text-tertiary-fixed-dim transition-colors">Home</a>
+                <a href="academics.html" class="hover:text-tertiary-fixed-dim transition-colors">Academics</a>
+                <a href="admissions.html" class="hover:text-tertiary-fixed-dim transition-colors">Admissions</a>
+                <a href="principal.html" class="hover:text-tertiary-fixed-dim transition-colors">Principal</a>
+                <a href="gallery.html" class="hover:text-tertiary-fixed-dim transition-colors">Gallery</a>
+                <a href="facilities.html" class="text-tertiary-fixed-dim">Facilities</a>
+                <a href="activities.html" class="hover:text-tertiary-fixed-dim transition-colors">Activities</a>
+                <a href="contact.html" class="mt-4 bg-primary text-white text-center py-4 rounded-2xl text-lg">Contact Us</a>
             </div>
         </div>
     </nav>
 
     <main class="pt-24 pb-20">
-        <section class="max-w-7xl mx-auto px-8 py-16">
-            <span class="text-on-tertiary-container font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Our Campus</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight mb-8">Spaces Designed <br/><span class="text-tertiary-fixed-dim">to Inspire.</span></h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <p class="text-lg text-on-surface-variant leading-relaxed">Explore our world-class facilities, where modern architecture meets academic rigor. Every corner of our campus is crafted to inspire curiosity and collaboration.</p>
+        <section class="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-16">
+            <span class="text-on-tertiary-container font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs mb-4 block">Our Campus</span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-primary tracking-tighter leading-tight mb-8">Spaces Designed <br/><span class="text-tertiary-fixed-dim">to Inspire.</span></h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <p class="text-base md:text-lg text-on-surface-variant leading-relaxed">Explore our world-class facilities, where modern architecture meets academic rigor. Every corner of our campus is crafted to inspire curiosity and collaboration.</p>
                 <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl">
                     <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpYxrtE3l6_0ovJ2HnDhDBSj5jyrglkm6AFECfuoibemWGp6XwCjyAd5h-ICmwAM1Dtls4N2yPCNh6OSWJCt4xZxW7EylwTbB19W3EEtLPhthvDUgD7OHSpymFVHDo8M1EH4TGgFbTHTA8HChXxZXChwEXQQXy8cs5MTIqiBfCRwCA0qQ8dSr_EjBrykwIkfi-BnHnluI85rP7uQgS8VTZuEcOTYuo3CjiAqKMQGbYNNed1bdQPt4CcYBrO8jRTlW_sVXQBxLGX5U" alt="Campus View"/>
                 </div>
@@ -97,19 +120,18 @@
         </section>
 
         <!-- Bento Grid Facilities -->
-        <section class="bg-surface-container-low py-24">
-            <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-6">
-                <div class="md:col-span-8 group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm p-10 min-h-[400px]">
-                    <h3 class="text-3xl font-bold text-primary mb-4">The Great Library</h3>
-                    <p class="text-on-surface-variant leading-relaxed max-w-xl">Housing over 50,000 volumes and digital archives, our library is an architectural marvel designed for quiet contemplation and deep research.</p>
-                    <img class="absolute bottom-0 right-0 w-1/2 opacity-20 filter grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQgOotqvc3JlqH5Kye92Yw868n21oMAZibApKbuPwAcw0P62iz-gLgTq-_bqDgM8mj7nGvonUptRHq5OjuJPilDUK9AcTJWtzS4Qlm4DqvMFIzO7XgVc8iui2be9igiMDUN6FsRgECOs2rwm4r2hFS7Bf0vwFsciCqbYUc9AH6aEJerAsA-fn2NO186vU4n7_KBW4kofMDPEe8x0eSczaoktIV8r94c3e9qW2HiYOTJlx7bri2hzMj1SCOtEj2CVdfp0p0y-dlLUI" alt="Library"/>
+        <section class="bg-surface-container-low py-16 md:py-24">
+            <div class="max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-6">
+                <div class="md:col-span-8 group relative overflow-hidden rounded-[2rem] bg-surface-container-lowest shadow-sm p-8 md:p-10 min-h-[300px] md:min-h-[400px]">
+                    <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">The Great Library</h3>
+                    <p class="text-on-surface-variant text-sm md:text-base leading-relaxed max-w-xl">Housing over 50,000 volumes and digital archives, our library is an architectural marvel designed for quiet contemplation and deep research.</p>
+                    <img class="absolute bottom-0 right-0 w-1/2 opacity-20 filter grayscale" src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1890&auto=format&fit=crop" alt="Library"/>
                 </div>
-                <div class="md:col-span-4 bg-primary text-on-primary p-10 rounded-[2rem] flex flex-col justify-center">
-                    <span class="material-symbols-outlined text-4xl text-tertiary-fixed mb-6">sports_basketball</span>
-                    <h3 class="text-2xl font-bold mb-4">Sports Complex</h3>
-                    <p class="text-primary-fixed/80 text-sm">Professional grade indoor arenas, Olympic-sized pool, and track facilities.</p>
+                <div class="md:col-span-4 bg-primary text-on-primary p-8 md:p-10 rounded-[2rem] flex flex-col justify-center min-h-[250px] md:min-h-0">
+                    <span class="material-symbols-outlined text-3xl md:text-4xl text-tertiary-fixed mb-6">sports_basketball</span>
+                    <h3 class="text-xl md:text-2xl font-bold mb-4">Sports Complex</h3>
+                    <p class="text-primary-fixed/80 text-xs md:text-sm">Professional grade indoor arenas, Olympic-sized pool, and track facilities.</p>
                 </div>
-                <!-- More items... -->
             </div>
         </section>
     </main>
