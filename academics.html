@@ -15,33 +15,33 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#001e40",
-                        "primary-container": "#003366",
+                        "primary": "#22c55e",
+                        "primary-container": "#064e3b",
                         "on-primary": "#ffffff",
-                        "on-primary-container": "#799dd6",
-                        "primary-fixed": "#d5e3ff",
-                        "primary-fixed-dim": "#a7c8ff",
-                        "secondary": "#515f74",
-                        "secondary-container": "#d5e3fc",
+                        "on-primary-container": "#dcfce7",
+                        "primary-fixed": "#86efac",
+                        "primary-fixed-dim": "#4ade80",
+                        "secondary": "#facc15",
+                        "secondary-container": "#713f12",
                         "on-secondary": "#ffffff",
-                        "on-secondary-container": "#57657a",
-                        "tertiary": "#2a1c00",
-                        "tertiary-container": "#453000",
+                        "on-secondary-container": "#fef9c3",
+                        "tertiary": "#eab308",
+                        "tertiary-container": "#422006",
                         "on-tertiary": "#ffffff",
-                        "on-tertiary-container": "#bb9650",
-                        "tertiary-fixed": "#ffdea5",
-                        "tertiary-fixed-dim": "#e9c176",
-                        "background": "#f7f9fb",
-                        "surface": "#f7f9fb",
-                        "on-surface": "#191c1e",
-                        "on-surface-variant": "#43474f",
-                        "outline": "#737780",
-                        "outline-variant": "#c3c6d1",
-                        "surface-container-low": "#f2f4f6",
-                        "surface-container": "#eceef0",
-                        "surface-container-high": "#e6e8ea",
-                        "surface-container-highest": "#e0e3e5",
-                        "surface-container-lowest": "#ffffff"
+                        "on-tertiary-container": "#fef3c7",
+                        "tertiary-fixed": "#fde047",
+                        "tertiary-fixed-dim": "#facc15",
+                        "background": "#022c22",
+                        "surface": "#064e3b",
+                        "on-surface": "#f8fafc",
+                        "on-surface-variant": "#d1d5db",
+                        "outline": "#6b7280",
+                        "outline-variant": "#374151",
+                        "surface-container-low": "#022c22",
+                        "surface-container": "#064e3b",
+                        "surface-container-high": "#065f46",
+                        "surface-container-highest": "#047857",
+                        "surface-container-lowest": "#020617"
                     },
                     borderRadius: {
                         "lg": "0.5rem",
@@ -66,16 +66,16 @@
 </head>
 <body class="bg-surface text-on-surface">
     <!-- Top Navigation Bar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <nav class="fixed top-0 w-full z-50 bg-emerald-950/80 backdrop-blur-md shadow-sm">
         <div class="flex items-center justify-between px-6 md:px-8 py-4 max-w-7xl mx-auto w-full">
             <a href="index.html" class="text-lg md:text-xl font-bold text-primary tracking-tighter uppercase whitespace-nowrap">Sanwal Public School</a>
             <div class="hidden md:flex items-center space-x-8 font-medium">
                 <a href="academics.html" class="text-primary font-bold border-b-2 border-tertiary-fixed-dim">Academics</a>
-                <a href="admissions.html" class="text-slate-600 hover:text-primary transition-colors">Admissions</a>
-                <a href="principal.html" class="text-slate-600 hover:text-primary transition-colors">Principal</a>
-                <a href="gallery.html" class="text-slate-600 hover:text-primary transition-colors">Gallery</a>
-                <a href="facilities.html" class="text-slate-600 hover:text-primary transition-colors">Facilities</a>
-                <a href="activities.html" class="text-slate-600 hover:text-primary transition-colors">Activities</a>
+                <a href="admissions.html" class="text-emerald-100 hover:text-primary transition-colors">Admissions</a>
+                <a href="principal.html" class="text-emerald-100 hover:text-primary transition-colors">Principal</a>
+                <a href="gallery.html" class="text-emerald-100 hover:text-primary transition-colors">Gallery</a>
+                <a href="facilities.html" class="text-emerald-100 hover:text-primary transition-colors">Facilities</a>
+                <a href="activities.html" class="text-emerald-100 hover:text-primary transition-colors">Activities</a>
             </div>
             <div class="flex items-center gap-2 md:gap-4">
                 <a href="contact.html" class="hidden sm:block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-medium text-sm transition-transform active:scale-95 shadow-lg shadow-primary/20">
@@ -90,7 +90,7 @@
     </nav>
     
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-white translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8 overflow-y-auto">
+    <div id="mobile-menu" class="fixed inset-0 z-[60] bg-emerald-950 translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-8 overflow-y-auto">
         <div class="flex justify-between items-center mb-12">
             <span class="text-xl font-bold text-primary uppercase">Menu</span>
             <button id="mobile-menu-close" class="p-2 text-primary">
@@ -230,23 +230,23 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-white w-full">
+    <footer class="bg-emerald-950 text-white w-full">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto w-full">
             <div class="col-span-1">
                 <div class="text-lg font-black uppercase tracking-widest mb-6">Sanwal Public School</div>
-                <p class="text-sm text-slate-400 mb-6 leading-relaxed">
+                <p class="text-sm text-emerald-300 mb-6 leading-relaxed">
                     123 Malital Road, Nainital<br/>
                     Uttarakhand, India 263001
                 </p>
                 <div class="flex gap-4">
-                    <span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-tertiary-fixed">social_leaderboard</span>
-                    <span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-tertiary-fixed">photo_camera</span>
-                    <span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-tertiary-fixed">play_circle</span>
+                    <span class="material-symbols-outlined text-emerald-300 cursor-pointer hover:text-tertiary-fixed">social_leaderboard</span>
+                    <span class="material-symbols-outlined text-emerald-300 cursor-pointer hover:text-tertiary-fixed">photo_camera</span>
+                    <span class="material-symbols-outlined text-emerald-300 cursor-pointer hover:text-tertiary-fixed">play_circle</span>
                 </div>
             </div>
             <div>
-                <h4 class="text-blue-400 font-bold mb-6">Navigation</h4>
-                <ul class="space-y-4 text-sm text-slate-400">
+                <h4 class="text-green-400 font-bold mb-6">Navigation</h4>
+                <ul class="space-y-4 text-sm text-emerald-300">
                     <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
                     <li><a href="academics.html" class="hover:text-white transition-colors">Academics</a></li>
                     <li><a href="admissions.html" class="hover:text-white transition-colors">Admissions</a></li>
@@ -254,25 +254,25 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-blue-400 font-bold mb-6">Resources</h4>
-                <ul class="space-y-4 text-sm text-slate-400">
+                <h4 class="text-green-400 font-bold mb-6">Resources</h4>
+                <ul class="space-y-4 text-sm text-emerald-300">
                     <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
                     <li><a href="facilities.html" class="hover:text-white transition-colors">Facilities</a></li>
                     <li><a href="activities.html" class="hover:text-white transition-colors">Activities</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-blue-400 font-bold mb-6">Contact</h4>
-                <p class="text-sm text-slate-400 mb-4 font-bold">info@modernacademy.edu</p>
+                <h4 class="text-green-400 font-bold mb-6">Contact</h4>
+                <p class="text-sm text-emerald-300 mb-4 font-bold">info@modernacademy.edu</p>
                 <div class="flex">
-                    <input class="bg-slate-800 border-none rounded-l-xl w-full text-sm p-3 focus:ring-1 ring-tertiary-fixed outline-none" placeholder="Email address" type="email"/>
+                    <input class="bg-emerald-900 border-none rounded-l-xl w-full text-sm p-3 focus:ring-1 ring-tertiary-fixed outline-none" placeholder="Email address" type="email"/>
                     <button class="bg-primary-container text-white px-4 rounded-r-xl">
                         <span class="material-symbols-outlined">send</span>
                     </button>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-emerald-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-emerald-400">
             <div>© 2024 Sanwal Public School, Nainital. All Rights Reserved.</div>
         </div>
     </footer>
